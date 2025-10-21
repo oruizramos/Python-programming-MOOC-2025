@@ -1,18 +1,18 @@
-#####
+"""
 # https://programming-25.mooc.fi/part-1/4-arithmetic-operations
-######
+"""
 
-#####
+"""
 # Times five
-######
+"""
 
 number = input("Please type in a number: ")
 result = int(number) * 5
 print(f"{number} times 5 is {result}")
 
-#####
+"""
 # Names and age
-######
+"""
 
 name = input("What is your name?")
 born_year = int(input("Which year were you born?"))
@@ -20,18 +20,18 @@ age = 2021 - born_year
 
 print(f"Hi {name}, you will be {age} years old at the end of the year 2021")
 
-#####
+"""
 # Seconds in a day
-######
+"""
 
 days = int(input("How many days? "))
 seconds = days * 24 * 60 * 60  # hours * minutes * seconds
 
 print(f"Seconds in that many days: {seconds}")
 
-#####
+"""
 # FIX THE CODE: PRODUCT
-######
+"""
 
 number1 = int(input("Please type in the first number: "))
 number2 = int(input("Please type in the second number: "))
@@ -41,9 +41,9 @@ product = number1 * number2 * number3
 
 print(f"The product is {product}")
 
-#####
+"""
 # SUM AND PRODUCT
-######
+"""
 
 number1 = int(input("Number 1: "))
 number2 = int(input("Number 2: "))
@@ -54,9 +54,9 @@ product = number1 * number2
 print(f"The sum of the numbers: {addition}")
 print(f"The product of the numbers: {product}")
 
-#####
+"""
 # SUM AND MEAN
-######
+"""
 
 number1 = int(input("Number 1: "))
 number2 = int(input("Number 2: "))
@@ -69,9 +69,9 @@ mean = addition / 4
 print(f"The sum of the numbers is {addition} and the mean is {mean}")
 
 
-#####
+"""
 # FOOD EXPENDITURE
-######
+"""
 
 times_in_cafeteria = int(input("How many times a week do you eat at the student cafeteria?"))
 price_student_lunch = float(input("The price of a typical student lunch?"))
@@ -86,9 +86,9 @@ print("Average food expenditure: ")
 print(f"Daily: {daily_total} euros")
 print(f"Weekly: {weekly_total} euros")
 
-#####
+"""
 # Students in groups
-######
+"""
 
 students = int(input("How many students on the course? "))
 desired_size = int(input("Desired group size? "))

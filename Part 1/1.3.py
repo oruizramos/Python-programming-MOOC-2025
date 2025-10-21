@@ -1,10 +1,10 @@
-#####
+"""
 # https://programming-25.mooc.fi/part-1/3-more-about-variables
-######
+"""
 
-#####
+"""
 # Extra space
-######
+"""
 
 name = "Tim Tester"
 age = 20
@@ -26,9 +26,9 @@ print(f" - {skill3} ({level3})")
 print()
 print(f"I am looking for a job with a salary of {lower}-{upper} euros per month")
 
-#####
+"""
 # Arithmetics
-######
+"""
 
 x = 27
 y = 15
@@ -38,9 +38,9 @@ print(f"{x} - {y} = {x - y}")
 print(f"{x} * {y} = {x * y}")
 print(f"{x} / {y} = {x / y}")
 
-#####
+"""
 # Fix the code: Print a single line
-######
+"""
 
 print(5 , end="")
 print(" + " , end="")

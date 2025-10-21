@@ -1,19 +1,19 @@
-#####
+"""
 # https://programming-25.mooc.fi/part-1/5-conditional-statements
-######
+"""
 
-#####
+"""
 # Orwell
-######
+"""
 
 number = int(input("Pleasey type in a number: " ))
 
 if number == 1984:
     print("Orwell")
 
-#####
+"""
 # Absolute Value
-######
+"""
 
 number = int(input("Please type in a number: "))
 absolute_value = number
@@ -22,9 +22,9 @@ if number < 0:
     absolute_value = number * -1
 print(f"The absolute value of this number is {absolute_value}")
 
-#####
+"""
 # Soup or no soup
-######
+"""
 
 PORTION_COST = 5.90 # Constant - price is fixed. Hence the CAPS
 name = input("Please tell me your name: ")
@@ -36,9 +36,9 @@ if name != "Jerry":
 
 print("Next please!")
 
-#####
+"""
 # Order of magnitude
-######    
+"""
 
 number = int(input("Please type in a number: "))
 
@@ -53,9 +53,9 @@ if number < 10:
 
 print("Thank you!")
 
-#####
+"""
 # Calculator
-######    
+"""  
 
 number1 = int(input("Number 1: "))
 number2 = int(input("Number 2: "))
@@ -79,9 +79,9 @@ if operation == "divide" and number2 != 0:
     print(f"{number1} / {number2} = {division}")
 
 
-#####
+"""
 # Temperatures
-######    
+"""
 
 farenheit = float(input("Please type in a temperature (F): "))
 celcius = (farenheit - 32) / (9/5)
@@ -90,9 +90,9 @@ print(f"{farenheit} degrees Fahrenheit equals {celcius} degrees Celsius")
 if celcius < 0:
     print("Brr! It's cold in here!")
 
-#####
+"""
 # Daily Wages
-######    
+"""    
 
 hourly_wage = float(input("Hourly wage: "))
 hours_worked = float(input("Hours worked: "))
@@ -105,9 +105,9 @@ if day == "Sunday":
 
 print(f"Daily wages: {daily_wages} euros")
 
-#####
+"""
 # Loyalty Bonus
-######    
+"""   
 
 points = float(input("How many points are on your card? "))
 
@@ -121,9 +121,9 @@ elif points < 100: #At this point in the course, I guess I was not supposed to u
 print(f"You now have {points} points")
 
 
-#####
+"""
 # What to wear tomorrow
-######   
+"""  
 
 temperature = float(input("What is the weather forecast for tomorrow? "))
 rain = input("Will it rain (yes/no)? ")
@@ -140,9 +140,9 @@ if temperature <= 5:
 if rain == "yes":
     print("Don't forget your umbrella!")
 
-#####
+"""
 # Solving a quadratic equation
-######   
+""" 
 
 # The square root can also be calculated using power.
 # sqrt(9) is equivalent to 9 ** 0.5
