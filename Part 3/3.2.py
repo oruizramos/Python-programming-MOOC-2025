@@ -50,3 +50,208 @@ while index >= 0:
 #KEY TAKEAWAYS:
 #For standard order: index = 0
 #For reverse order: index = len(string) - 1
+
+"""
+# Second and second to last characters
+"""
+
+string = input("Please type in a string: ")
+second_index = string[1]
+second_to_last_index = string[-2]
+
+if len(string) > 1:  #Condition to check that the word is at least 2 characters long
+    if second_index == second_to_last_index:
+        print(f"The second and the second to last characters are {second_index}")
+    else:
+        print("The second and the second to last characters are different")
+
+
+"""
+# A line of hashes
+"""
+
+width = int(input("Width: "))
+character = "#"
+
+print(f"{character}" * width)
+
+
+"""
+# A rectangle of hashes
+"""
+
+# Rule of thump: “If you don’t have a special reason to count down, count up.”
+
+width = int(input("Width: "))
+height = int(input("Height: "))
+character = "#"
+
+n = 0
+while n < height:
+    print(character * width)
+    n += 1
+
+# I originally had the following version, but apparently due to the previous rule of thumb, it was a bad practice. It also:
+#The loop destroys the value of n (it ends up 0).
+#If ever the need to use height again inside the loop (e.g., to label rows), another variable would be needed anyway.
+
+#width = int(input("Width: "))
+#height = int(input("Height: "))
+#character = "#"
+
+#n = height
+#while n > 0:
+    #print(character * width)
+    #n -= 1
+
+"""
+# Underlining
+"""
+
+# “Sentinel-controlled loop” pattern.This order follows the classic “Input → Check → Process” flow
+
+character = "-"
+
+while True:
+    string = input("Please type in a string: ")  #1. Input
+    if string == "":                             #2. Check for exit/Break
+        break
+    print(string)                                #3. Output 
+    print(len(string) * character)
+    
+
+
+"""
+# Right-aligned
+"""
+string = input("Please type in a string: ")
+character = "*"
+full_lenght = 20 - len(string)
+
+print((full_lenght * character) + string)
+
+# ================= Calculations (Split vs Combine) =================
+#
+# Example: Formatting a string to 20 chars with '*' padding
+# 
+# --------Rule of thumb for Python beginners----------
+# Ask yourself: “Would someone reading this for the first time immediately understand what’s happening?”
+# If yes → combining is okay.
+# If no → split into meaningful variables with clear names.
+#
+# ---------------- Split calculation ----------------
+# string = "python"
+# padding = 20 - len(string)       # calculate number of '*' separately
+# stars   = "*" * padding          # build the padding string
+# formatted_string = stars + string
+# print(formatted_string)
+#
+# Advantages:
+# - Each step is clear and named
+# - Easy to debug intermediate values
+# - Easier to modify or extend later
+#
+# ---------------- Combine calculation ----------------
+# string = "python"
+# formatted_string = "*" * (20 - len(string)) + string
+# print(formatted_string)
+#
+# Advantages:
+# - Shorter
+# - Works for simple cases
+#
+# Disadvantages:
+# - Harder to read if expression is complex
+# - No intermediate values to debug
+#
+# Rule of Thumb:
+# - Split for clarity and maintainability
+# - Combine for short, obvious expressions
+#
+# =====================================================
+
+"""
+# A framed word
+"""
+
+word = input("Word: ")
+frame_width = 30
+character = "*"
+
+# Calculate available space for padding (excluding the border characters)
+space = frame_width - 2 - len(word)
+left_padding  = space // 2
+right_padding = space - left_padding
+
+# Middle line creation with f string concatenation. 
+middle_line = f"{character}{' ' * left_padding}{word}{' ' * right_padding}{character}"
+
+print(character * frame_width)
+print(middle_line)
+print(character * frame_width)
+
+#Key takeaway:
+#Multiplying a string by an integer always gives a string. Concatenating only works with strings. F-strings automatically handle conversion, so they are safer and cleaner.
+
+"""
+# Substrings, part 1
+"""
+
+string = input("Please type in a string: ")
+second_slice = 1
+
+while second_slice <= len(string):
+    #Half-open intervals: string[start:end] = includes the start index, but excludes the end index. 
+    print(string[0:second_slice]) #Even if when the first print is [0,1], it only prints the start of the index. 
+    second_slice += 1
+
+"""
+# Substrings, part 2
+"""
+
+string = input("Please type in a string: ")
+first_slice = len(string) - 1   #len(string) - 1 Standard notation to start at the end of a string
+
+while first_slice >= 0:
+    #Half-open intervals: string[start:end] = includes the start index, but excludes the end index. 
+    print(string[first_slice:]) #Now the first print is [lastindex,], so it prints the slices backwards
+    first_slice -= 1
+
+"""
+# Does it contain vowels
+"""
+
+string = input("Please type in a string: ")
+vowels = "aeo" #Store all vowels at once to loop over them instead of writing a separate if for "a", "e", and "o".
+index = 0 #Tracker to "move" through each vowel.
+
+while index < len(vowels): #Loop goes through each vowel one by one.
+    vowel = vowels[index] #The same if vowel in string: block can work for "a", "e", "o" automatically
+    #In python, if a condition already returns a True/False value,👉 never add == True or == False.
+    if vowel in string: #This will return either True or False already
+        print(vowel, "found")
+    else:
+        print(vowel, "not found")
+    index += 1
+
+"""
+# Find the first substring
+"""
+
+word = input("Please type in a word: ")
+character = input("Please type in a character: ")
+
+if word.find(character) = 
+    
+
+
+input_string = "perpendicular"
+
+while True:
+    substring = input("What are you looking for? ")
+    index = input_string.find(substring)
+    
+    if index >= 0:
+        print(f"Found it at the index {index}")
+    else:
+        print("Not found")
