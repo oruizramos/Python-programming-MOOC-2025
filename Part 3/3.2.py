@@ -241,17 +241,55 @@ while index < len(vowels): #Loop goes through each vowel one by one.
 word = input("Please type in a word: ")
 character = input("Please type in a character: ")
 
-if word.find(character) = 
-    
+# Find the index of the first occurrence of the character in the word
+index = word.find(character)
+# Check if the character was found AND if there are at least 3 characters remaining starting from that index
+# - index != -1 makes intention clearer: “if character was found.”
+# - len(word) - index >= 3 ensures slicing three characters won't go out of bounds
+if index != -1 and len(word) - index >= 3:  
+    print(word[index:index + 3])
 
+#No need to print else, since the nothings needs to be printed/done in any other case
 
-input_string = "perpendicular"
+"""
+# Find all the substrings
+"""
+
+word = input("Please type in a word: ")
+character = input("Please type in a character: ")
 
 while True:
-    substring = input("What are you looking for? ")
-    index = input_string.find(substring)
-    
-    if index >= 0:
-        print(f"Found it at the index {index}")
+    #Defining index inside the loop ensures the search is always relative to the current string.
+    #If defined outside, it would only work for the original string and fail as soon as word is updated.
+    #Iteratively processing a shrinking or changing collection: recalculate the “position” each time.
+    index = word.find(character) 
+    if index != -1 and len(word) - index >= 3:
+        print(word[index:index + 3])
+        word = word[index + 1:]
     else:
-        print("Not found")
+        break
+        
+    
+"""
+# The second occurence 
+"""
+
+# Step 1: Get input
+string = input("Please type in a string: ")
+substring = input("Please type in a substring: ")
+
+# Step 2: Find the first occurrence
+first_index = string.find(substring)
+
+# Step 3: Check if it exists at all
+if first_index == -1:
+    print("The substring does not occur twice in the string.")
+else:
+    # Step 4: Find the second occurrence
+    second_index = string.find(substring, first_index + len(substring))
+    
+    # Step 5: Check if the second occurrence exists
+    if second_index == -1:
+        print("The substring does not occur twice in the string.")
+    else:
+        print(f"The second occurrence of the substring is at index {second_index}.")
