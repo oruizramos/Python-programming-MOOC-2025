@@ -54,14 +54,14 @@ if __name__ == "__main__":                              # Check if the script is
 # A square of hashes
 """ 
 
-def hash_square(size):                                   # Define the function, taking 'size' (the side length) as an argument.
-    tows = size                                         # Initialize a counter variable 'tows' (representing rows remaining) to 'size'.
-    while tows > 0:                                     # Start a loop that continues as long as there are rows left to print (tows > 0).
-        print("#" * size)                               # Print a row by multiplying the '#' character by the side 'size'.
-        tows -= 1                                       # Decrement the row counter 'tows' by 1 to move toward the loop exit condition.
+def hash_square(size):            # Define the function, taking 'size' (the side length) as an argument.
+    tows = size                   # Initialize a counter variable 'tows' (representing rows remaining) to 'size'.
+    while tows > 0:               # Start a loop that continues as long as there are rows left to print (tows > 0).
+        print("#" * size)         # Print a row by multiplying the '#' character by the side 'size'.
+        tows -= 1                 # Decrement the row counter 'tows' by 1 to move toward the loop exit condition.
 
-if __name__ == "__main__":                              # Check if the script is being executed directly.
-    hash_square(5)                                      # Test the function by drawing a square with side length 5.
+if __name__ == "__main__":        # Check if the script is being executed directly.
+    hash_square(5)                # Test the function by drawing a square with side length 5.
 
 
 

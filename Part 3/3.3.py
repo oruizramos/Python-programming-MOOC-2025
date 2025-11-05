@@ -50,40 +50,36 @@ while operand1 <= number:
 """
 #First letters of words
 """
-sentence = input("Please type in a sentence: ") # Prompt the user and store the input string.
+sentence = input("Please type in a sentence: ")
+index = 0
 
-# Add a space at the start, to make handling sentence easier
-sentence = " " + sentence                   # Prepend a space to the sentence for uniform word detection.
-
-# Searching for indexes which are preceded by spaces
-index = 1                                  # Initialize 'index' to 1 to start checking the first character after the added space.
-while index < len(sentence):                # Loop as long as the index is within the bounds of the sentence string.
-    # Check if the character BEFORE the current index is a space...
-    if sentence[index-1] == " " and \
-sentence[index] != " ":             # ...AND the character AT the current index is NOT a space (start of a word).
-        print(sentence[index])             # If both conditions are true, print the character (the first letter).
-    index += 1                             # Increment the index to move to the next character in the sentence.
+while index < len(sentence):
+    # Only print characters that are NOT spaces
+    # and are at the start of a word
+    if sentence[index] != " " and (index == 0 or sentence[index - 1] == " "):
+        print(sentence[index])
+    index += 1
 
 """
 #Factorial
 """
 
-while True:                             # Start an infinite loop to repeatedly ask for input.
-    # Prompt the user, convert input to integer. Note: this will crash on non-number input.
-    number = int(input("Please type in a number: ")) 
-    if number <= 0:                     # Check if the number is less than or equal to 0.
-        break                           # Exit the 'while True' loop if the condition is met.
-
-    factorial = 1                       # Initialize the 'factorial' result variable to 1.
-    new = 1                             # Initialize a counter 'new' to 1 for the inner loop.
-    while new <= number:                # Start inner loop: run as long as 'new' is less than or equal to the input 'number'.
-        factorial *= new                # Multiply 'factorial' by the current value of 'new' (calculating the product).
-        new += 1                        # Increment 'new' by 1 to move to the next factor.
-
-    # Print the calculated result using an f-string to embed the variables.
+while True:  # Start an infinite loop to repeatedly ask for input.
+    number = int(input("Please type in a number: "))
+    
+    if number <= 0: # Check if the number is less than or equal to 0.
+        break
+    
+    factorial = 1  # Initialize the 'factorial' result variable to 1.
+    counter = 1    # Initialize a counter to 1 for the inner loop.
+    
+    while counter <= number:   # Start inner loop: run as long as 'new' is less than or equal to the input 'number'.
+        factorial = factorial * counter   # Multiply 'factorial' by the current value of 'new' (calculating the product).
+        counter += 1          # Increment 'counter' by 1 to move to the next factor.
     print(f"The factorial of the number {number} is {factorial}")
 
-print("Thanks and bye!")                # Print the final exit message after the main loop has broken.
+print("Thanks and bye!")    
+
 
 """
 #Flip the pairs
